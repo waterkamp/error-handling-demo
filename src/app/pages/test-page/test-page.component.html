@@ -1,0 +1,13 @@
+<div class="title">Testpage</div>
+
+<div class="button-list">
+    <button (click)="getUsers()">get users from REST-API</button><br>
+    <button (click)="getUsersFailing()">get users from REST-API(fails with 404 status-code)</button><br>
+    <button (click)="throwClientError()">throw client error</button>
+</div>
+
+<div *ngFor="let user of users">
+    {{user.id}}<br>
+    {{user.name}}<br>
+    {{user.email}}<br>
+</div>
